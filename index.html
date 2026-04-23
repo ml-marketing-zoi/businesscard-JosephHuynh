@@ -1,42 +1,119 @@
-<style>
-    :root {
-        --zoi-dark-blue: #0A324E;
-        --zoi-turquoise: #00A4B3;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Huynh | Digital Business Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --zoi-dark-blue: #0A324E;
+            --zoi-turquoise: #00A4B3;
+        }
 
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--zoi-dark-blue);
-        font-family: 'Montserrat', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: white;
-        overflow: hidden; 
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--zoi-dark-blue);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            /* Prevents scrolling on mobile for a clean app-like feel */
+            overflow: hidden; 
+        }
 
-    .container {
-        text-align: center;
-        width: 100%;
-        max-width: 350px;
-        padding: 20px;
-    }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+        }
 
-    .profile-img {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 30px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Thin Turquoise Line as requested */
+            border: 2px solid var(--zoi-turquoise); 
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
 
-        /* THE FIX: These three lines create space around his head */
-        padding: 10px; /* Adjust this to zoom out more or less */
-        border: 2px solid var(--zoi-turquoise); /* Keeps the turquoise line */
-        background-color: var(--zoi-dark-blue); /* Solid blue background inside the ring */
-    }
+        h1 {
+            font-weight: 800; /* Extra Bold */
+            text-transform: uppercase; /* Capslock */
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin: 0 0 25px 0;
+            line-height: 1.2;
+        }
 
-    /* Keep all your other existing styles for h1, buttons, etc. */
-</style>
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .email-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400; /* Regular */
+            opacity: 0.9;
+        }
+
+        /* The clickable turquoise button for the website */
+        .website-button {
+            background-color: var(--zoi-turquoise);
+            color: var(--zoi-dark-blue); /* Dark text for contrast on turquoise */
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            width: 180px;
+            display: inline-block;
+        }
+
+        .website-button:active {
+            transform: scale(0.95);
+            opacity: 0.9;
+        }
+
+        .footer-logo {
+            margin-top: 60px;
+            font-size: 0.7rem;
+            opacity: 0.4;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="portrait.jpg" alt="Joseph Huynh" class="profile-img">
+
+        <h1>Joseph<br>Huynh</h1>
+
+        <div class="info-container">
+            <a href="mailto:joseph.huynh@zoi.tech" class="email-link">joseph.huynh@zoi.tech</a>
+            
+            <a href="https://zoi.tech" target="_blank" class="website-button">zoi.tech</a>
+        </div>
+
+        <div class="footer-logo">
+            © ZOI
+        </div>
+    </div>
+
+</body>
+</html>
